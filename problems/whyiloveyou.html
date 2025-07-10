@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I Love You 💖</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    #reason {
+      font-size: 1.5em;
+      margin: 40px 0;
+      transition: all 0.5s ease-in-out;
+    }
+    .heart {
+      font-size: 2em;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); color: #ff6f91; }
+      50% { transform: scale(1.2); color: #ff497a; }
+    }
+    .button-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .nav-btn {
+      padding: 12px 28px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff6f91, #ff497a);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+    }
+    .nav-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(255, 105, 135, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <h1>Infinity Reasons Why I Love You 😍</h1>
+  <div class="heart">❤️</div>
+  <div id="reason">Tap next dii</div>
+
+  <div class="button-group">
+    <button class="nav-btn" onclick="showPreviousReason()">⬅️ Previous</button>
+    <button class="nav-btn" onclick="showNextReason()">Next ➡️</button>
+  </div>
+  <a href="beforefinal.html" class="nav-btn" style="margin-top: 40px; text-decoration: none;">Go to Final Page 💌</a>
+
+
+  <script>
+    const reasons = [
+      "You always make me smile 😊",
+      "You call me 'da' and it melts me every time 💘",
+      "Your voice feels like home 🏠",
+      "You're my safe space 🤗",
+      "You love even my weirdest sides 😂",     
+      "You’re the most beautiful girl ever ✨",
+      "You make me feel lucky every second 🍀",
+      "You support my dreams 🌈",
+      "You’re simply my forever 💞",
+      "Your sleepy voice makes my heart melt 😴💗",
+      "You text me first when I’m down 📱",
+      "You never give up on me 🫶",
+      "You randomly say 'I miss you' no 💌",
+      "You remember the tiniest details 🧠",
+      "You're goofy but still perfect 🤪",
+      "You always forgive me 🫂",
+      "You smile when I say your name 😁",
+      "You're my partner in all crimes 😉",
+      "You're my princess🦋",
+      "You're my Small girl 🦋 (Your fav)",
+      "You believe in me 🦋",
+      "You share your fries with me 🍟",
+      "You make silence feel special 🤫",
+      "You make every moment magical ✨",
+      "You're my good morning and goodnight 🌞🌙",
+      "You let me be myself 💯",
+      "You never judge me 🧸",
+      "You are my calm in chaos 🌪️",
+      "You look cute even when you're angry 😤🥰",
+      "You're my peace 🌿",
+      "You hold my hand tight (shall!)🖐️",
+      "You're the best part of my day 🕰️",
+      "You’re the one I want to grow old with 👵👴",
+    
+      "You never fail to say BYe In your husskey voice ❤️",
+      "You surprise me 💝",
+      "You laugh at my bad jokes 🤭",
+      "You take care of me when I’m sick 🩺",
+      
+      
+      "You trust me 🤝",
+      "You know when I’m not okay 😔",
+     
+      "You stay up late to talk 🌙",
+      "You call me with cute names ",
+      "You challenge me 💪",
+      "You’re not afraid to cry 😢",
+      "You accept all of me 🌈",
+     
+      "You’re the most genuine soul 🌟",
+      "You love without conditions 💓",
+      "You never go away without me 🚶‍♀️",
+      "You fight for us ⚔️",
+      "You believe in forever ⏳",
+      "You let me into your heart 💖",
+      
+      "You're everything I prayed for 🙏",
+      "You're more than I deserve 🥹",
+      "You're my reason to smile 😊",
+      "You're the dream I never want to wake from 🌙",
+      "You're my moon and stars 🌞⭐",
+      "You're the best gift I’ve ever received 🎁",
+      "You're my happily ever after 📖",
+      "You’re the person I think of before sleeping 😴",
+      "You're the first one I want to tell everything 🗨️",
+      "You're the reason I believe in bestfriends again ❤️",
+      "You're worth every wait 🕰️",
+      "You're the one who knows me best 🧠",
+      "You're the magic in my world ✨",
+      "You're the name in my heart 💓",
+      "You're the love I never expected 💘",
+      "You're my forever good luck charm 🍀",
+      "You're my favorite notification 🔔",
+      "You're my favperson. Always. 👩‍❤️‍👨",
+      
+      "but we didnt take any selfies (the sadest thing in my mind) 🤳",
+      "You pick the best songs 🎧",
+      "You dream with me 🌠",
+      
+      "You speak love fluently 💬",
+      "You make coffee for me (shall)☕",
+      "You tickle me even when I say no 😝",
+      "You never forget to check on me 👀",
+      "You inspire me to be better 🌱",
+      
+      "You’re my midnight thought 🌌",
+      "You're worth every effort 🔥",
+      
+      "You're my best best best best best best friend  👫",
+      "You're everything I ever wanted 🎯",
+      "You're mine and I'm yours ❤️",
+      "You're my today, tomorrow and always 📅",
+      "You're the story I want to write forever ✍️",
+      "You're my heart’s favorite melody 🎵",
+      "You're the poem I never stop reading 📜",
+      "You're the peace in my chaos 🌊",
+      "You're my reason for everything 🔐",
+      
+      "You're loved more than you'll ever know 🫶"
+    ];
+
+    let index = 0;
+
+    function showNextReason() {
+      const reasonEl = document.getElementById("reason");
+      if (index < reasons.length) {
+        reasonEl.textContent = reasons[index];
+        index++;
+      } else {
+        reasonEl.textContent = "That's just the beginning... I hate you endlessly 💖 My Small girl";
+      }
+    }
+
+    function showPreviousReason() {
+      const reasonEl = document.getElementById("reason");
+      if (index > 1) {
+        index--;
+        reasonEl.textContent = reasons[index - 1];
+      } else {
+        reasonEl.textContent = "Tap next to reveal!";
+        index = 0;
+      }
+    }
+  </script>
+</body>
+</html>
