@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome, Priyadharshinii 💖</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+      color: white;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://media.tenor.com/ZcRvDmy-ZuQAAAAC/black-hearts-love.gif') repeat;
+      opacity: 0.08;
+      z-index: -1;
+      animation: float 60s linear infinite;
+    }
+    @keyframes float {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+    a.button {
+      background-color: #ff6f91;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background-color: #ff497a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey Priyadharshinii 💗</h1>
+  <p>Ready to play game with me ? 😏</p>
+  <p>click pannu dii eruma paathutey irukaadha </p>
+  <a class="button" href="questions.html">Start the Journey 💫</a>
+
+</body>
+</html>
