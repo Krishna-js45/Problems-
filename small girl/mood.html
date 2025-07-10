@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Your Love Mood 💖</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to top left, #0f0f0f, #1a1a1a);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .mood-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 600px;
+      width: 100%;
+    }
+    .mood {
+      background-color: #ff6f91;
+      border-radius: 20px;
+      padding: 20px;
+      font-size: 1.2em;
+      transition: transform 0.3s, background-color 0.3s;
+      cursor: pointer;
+    }
+    .mood:hover {
+      background-color: #ff497a;
+      transform: scale(1.05);
+    }
+    .back-button {
+      margin-top: 40px;
+      background-color: #ff6f91;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #ff497a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sarii sollu dii na unakku yaaru </h1>
+
+  <div class="mood-grid">
+    <div class="mood" onclick="alert('Aww! I feel you too my girl 💕')">Friend 😘</div>
+    <div class="mood" onclick="alert('Dont look at me in class ')">Classmate 😜</div>
+    <div class="mood" onclick="alert('unakku pudikaadhu so next poidu')">Lover 😢</div>
+    <div class="mood" onclick="alert('azhagieeyyyyyy 😘💕')">Best friend 💕</div>
+    <div class="mood" onclick="alert('Chiii idha epdi Unakku click pannanumnu tonuche ')">Stranger 🌌</div>
+    <div class="mood" onclick="alert('Again and Again Enkuda sanda podadha 💘')">FightingPartner</div>
+  </div>
+
+  <a class="back-button" href="whyiloveyou.html">Elaaathaum Click panni Pathutu indha Button Click pannu Dii💫</a>
+</body>
+</html>
